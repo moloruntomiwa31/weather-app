@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-size: 1.1rem;
+}
+
+.body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.616), #2725255d),  url('../img/pexels-nextvoyage-457937.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+#title {color: #f6f1f1; font-weight: 600;}
+.search-tab {
+    margin-top: 10px;
+    margin: auto;
+    width: 100%;
+    font-family: Syne;
+    background-color: #fffae7;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+#city {
+    padding: 10px;
+    border: 0;
+    width: 50%;
+    outline: none;
+    background: transparent;
+}
+#error {display: inline-block; margin-left: 30%; color: red; font-style: italic;}
+input[type="text"] + button {
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+input[type="text"]:not(:placeholder-shown) + button {
+    opacity: 1;
+}
+#search {
+    padding: 10px;
+    background-color: #1db5df;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5 ease-in;
+}
+#search:hover  {background-color: #082f53;}
+.location {display: flex; justify-content: center;}
+.location div {
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .location div {
+        width: 50%;
+    }
+    .search-tab {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 568px) {
+    .body {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+}
+#city-name {
+    font-weight: 800;
+    color: #000;
+}
+#date {
+    background-color: #000;
+    color: #f6f1f1;
+    /* width: fit-content; */
+    border-radius: 20px;
+}
+ #temp, #summary {
+    color: #000;
+    font-weight:  400;
+    text-transform: capitalize;
+}
+#description, #summary {color: #f6f1f1;}
+
+#temp {
+    font-size: 5rem;
+    text-shadow: 2px 4px 2px #f6f1f1;
+}
+.black-box {
+    background-color: black;
+    color: #f6f1f1;
+    border-radius: 15px;
+    padding-top: 20px;
+}
+.display-img {
+    display: flex;
+    justify-content: center;
+}
+footer p {
+    color: red;
+    font-family: Syne;
+}
+#time {color: #000; font-weight: 400;}
+
+#weather-img {
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-20px);
+        transform: translateY(10px);
+    }
+}
