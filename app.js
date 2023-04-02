@@ -20,8 +20,19 @@ const gday = () => {
     const month = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const currentDate = `${weekday[today.getDay()]} ${today.getDate()} ${month[today.getMonth()]}, ${today.getFullYear()}`
-    dateDisplay.innerText = currentDate
-    document.getElementById("time").innerText = today.toLocaleTimeString();
+    dateDisplay.innerText = currentDate;
+    let antiMeridian  = "AM"
+    let hour = today.getHours()
+    const minutes = today.getMinutes()
+    if (minutes < 10) {
+        minutes = `0${minutes}`
+    }
+    if (hour > 12) {
+        hour -= 12
+        antiMeridian = "PM"
+    }
+    console.log(hour);
+    document.getElementById("time").innerHTML = `${hour} : ${minutes} ${antiMeridian}`;
 }
 
 const weather = async (key, url, city) => {
