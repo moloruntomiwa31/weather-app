@@ -28,7 +28,7 @@ const gday = () => {
         minutes = `0${minutes}`
     }
     if (hour > 12) {
-        hour -= 12
+        hour  -= 12
         antiMeridian = "PM"
     }
     console.log(hour);
