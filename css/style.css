@@ -8,7 +8,7 @@
 }
 
 .body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.404), #2725255d),  url('../img/pexels-nextvoyage-457937.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404), #2725255d),  url('../img/pexels-aleksandar-pasaric-325185.jpg');
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -16,6 +16,11 @@
     padding: 20px;
 }
 #title {color: #f6f1f1; font-weight: 600;}
+#title span {
+    color:  red;
+    font-weight: 600;
+    font-style: italic;
+}
 .search-tab {
     margin-top: 10px;
     margin: auto;
